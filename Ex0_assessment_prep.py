@@ -44,6 +44,9 @@
 #
 # Write your code below:
 
+tasks = []
+print(tasks)
+
 
 
 
@@ -73,8 +76,11 @@
 #
 # Write your code below:
 
-
-
+print ("=" * 30)
+print ("TASK MANAGER SYSTEM")
+print ("Keep track of your daily tasks")
+print ("=" * 30)
+print ()
 
 # -------------------------------------------
 # SWAP COMPUTERS (Don't swap computers if working alone)
@@ -110,7 +116,7 @@
 #
 # Write your code below:
 
-
+#
 
 
 # -------------------------------------------
@@ -146,6 +152,14 @@
 # 5. Test it - the menu should repeat until you type "3"
 #
 # Write your code (modify your Task 3 code):
+print("1. Add task")
+print("2. View all tasks")
+print("3. Exit")
+choice = 0
+choice = input("Select an option: ")
+
+   
+
 
 
 
@@ -186,8 +200,15 @@
 #
 # Write your code (add to your while loop from Task 4):
 
-
-
+# while choice != "1" and choice != "2" and choice != "3":
+#     print("ERROR: Invalid choice")
+#     print()
+#     print("1. Add task")
+#     print("2. View all tasks")
+#     print("3. Exit")
+#     print()
+#     choice = input("Select an option: ")
+#     print()
 
 # -------------------------------------------
 # SWAP COMPUTERS (Don't swap computers if working alone)
@@ -220,6 +241,21 @@
 #
 # Write your code (add to your while loop):
 
+# while choice != "1" and choice != "2" and choice != "3":
+#     print("ERROR: Invalid choice")
+#     print()
+#     print("1. Add task")
+#     print("2. View all tasks")
+#     print("3. Exit")
+#     print()
+#     choice = input("Select an option: ")
+#     print()
+# if choice == "1":
+#     task_name = input("Enter the task: ")
+#     priority = input("Enter Priority (High/Medium/Low): ")
+#     print()
+#     print("Task Added Successfully")
+#     print()
 
 
 
@@ -256,8 +292,33 @@
 # 4. Test by pressing Enter without typing anything
 #
 # Write your code (add to your choice == "1" section):
+# while choice != "1" and choice != "2" and choice != "3":
+#     print("ERROR: Invalid choice")
+#     print()
+#     print("1. Add task")
+#     print("2. View all tasks")
+#     print("3. Exit")
+#     print()
+#     choice = input("Select an option: ")
+#     print()
+# if choice == "1":
+#     task_name = input("Enter task name: ")
+#     while task_name == "":
+#         print("ERROR: Task name cannot be blank")
+#         task_name = input("Enter task name:")
+#     priority = input("Enter Priority (High/Medium/Low): ")
+#     while priority == "":
+#         print("ERROR: Priority cannot be blank")
+#         priority = input("Enter priority (High/Medium/Low): ")
+#         print()
+#         print("Task Added Successfully")
+#         print()
+#     else:
+#         print()
+#         print("Task Added Successfully")
 
-
+   
+   
 
 
 # -------------------------------------------
@@ -293,8 +354,36 @@
 #
 # Write your code (add to your choice == "1" section):
 
-
-
+# while choice != "1" and choice != "2" and choice != "3":
+#     print("ERROR: Invalid choice")
+#     print()
+#     print("1. Add task")
+#     print("2. View all tasks")
+#     print("3. Exit")
+#     print()
+#     choice = input("Select an option: ")
+#     print()
+# if choice == "1":
+#     task_name = input("Enter task name: ")
+#     while task_name == "":
+#         print("ERROR: Task name cannot be blank")
+#         task_name = input("Enter task name:")
+#     priority = input("Enter Priority (High/Medium/Low): ")
+#     while priority == "":
+#         print("ERROR: Priority cannot be blank")
+#         priority = input("Enter priority (High/Medium/Low): ")
+#         print()
+#         print("Task Added Successfully")
+        
+#     task = {
+#         "name": task_name,
+#         "priority": priority,
+#         "status": "Not Started"
+#     }
+#     tasks.append(task)
+# print()
+# print("Task Added Successfully")
+# print(tasks)
 
 # -------------------------------------------
 # SWAP COMPUTERS (Don't swap computers if working alone)
@@ -334,6 +423,48 @@
 #
 # Write your code (add after your choice == "1" section):
 
+while choice != "1" and choice != "2" and choice != "3":
+    print("ERROR: Invalid choice")
+    print()
+    print("1. Add task")
+    print("2. View all tasks")
+    print("3. Exit")
+    print()
+    choice = input("Select an option: ")
+    print()
+if choice == "1":
+    task_name = input("Enter task name: ")
+    while task_name == "":
+        print("ERROR: Task name cannot be blank")
+        task_name = input("Enter task name:")
+    priority = input("Enter Priority (High/Medium/Low): ")
+    while priority == "":
+        print("ERROR: Priority cannot be blank")
+        priority = input("Enter priority (High/Medium/Low): ")
+        print()
+        print("Task Added Successfully")
+    task = {
+        "name": task_name,
+        "priority": priority,
+        "status": "Not Started"
+    }
+    tasks.append(task)
+    print()
+    print("Task Added Successfully")
+    print(tasks)
+elif choice == "2":
+    if len(tasks) == 0:
+        print("No tasks recorded yet")
+        print()
+    else:
+        print("All tasks:")
+        print()
+        for task in tasks:
+            print(f"Name: {task['name']}")
+            print(f"Priority: {task['priority']}")
+            print(f"Status: {task['status']}")
+            print("---------------------------------------")
+            print()    
 
 
 
