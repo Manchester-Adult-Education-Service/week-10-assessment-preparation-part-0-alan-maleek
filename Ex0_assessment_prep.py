@@ -449,22 +449,22 @@ if choice == "1":
         "status": "Not Started"
     }
     tasks.append(task)
+    print()
+    print("Task Added Successfully")
+    print(tasks)
 elif choice == "2":
     if len(tasks) == 0:
         print("No tasks recorded yet")
         print()
-else:
-    print("All tasks:")
-    print()
-    for task in tasks:
-        print(f"Name: {task['name']}")
-        print(f"Priority: {task['priority']}")
-        print(f"Status: {task['status']}")
-        print("---------------------------------------")
-        print()    
-print()
-print("Task Added Successfully")
-print(tasks)
+    else:
+        print("All tasks:")
+        print()
+        for task in tasks:
+            print(f"Name: {task['name']}")
+            print(f"Priority: {task['priority']}")
+            print(f"Status: {task['status']}")
+            print("---------------------------------------")
+            print()    
 
 
 
