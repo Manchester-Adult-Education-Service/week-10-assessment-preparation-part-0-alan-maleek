@@ -115,14 +115,8 @@ print ()
 # 5. Print what they chose: print(f"You selected: {choice}")
 #
 # Write your code below:
-print("1. Add task")
-print("2. View all tasks")
-print("3. Exit")
-print()
-choice = input("Select an option: ")
-print()
 
-print(f"You selected: {choice}")
+#
 
 
 # -------------------------------------------
@@ -158,6 +152,15 @@ print(f"You selected: {choice}")
 # 5. Test it - the menu should repeat until you type "3"
 #
 # Write your code (modify your Task 3 code):
+
+choice = 0
+while choice != "3":
+    print("1. Add task")
+    print("2. View all tasks")
+    print("3. Exit")
+    print()
+    choice = input("Select an option: ")
+    print ()
 
 
 
